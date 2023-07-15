@@ -11,7 +11,7 @@ import { RouterLink, RouterView } from "vue-router";
           name: 'article',
           params: { id: article },
         }"
-        >{{ article
+        >{{ articles[1][article].name
         }}<span id="article-list-span">
           - {{ articles[1][article].time }}</span
         ></router-link

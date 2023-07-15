@@ -1,7 +1,8 @@
 export const articles = [
-  ["mad_max: fury_road"],
+  ["mad_max_fury_road"],
   {
-    "mad_max: fury_road": {
+    mad_max_fury_road: {
+      name: "Mad Max: Fury Road",
       time: "July 9th 2023",
       content: [
         "It came as a pleasant surprise, the scale and intensity of the action scenes George Miller brings to the screen. Perhaps this is, in part, to my ignorance of previous Mad Max films or any other George Miller flick.",

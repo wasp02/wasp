@@ -25,7 +25,7 @@ function getLines() {
 <template>
   <div className="article-wrapper">
     <div className="paragraph-wrapper">
-      <h1>{{ id }}</h1>
+      <h1>{{ articles[1][props.id].name }}</h1>
       <time>{{ getTime() }}</time>
       <p v-for="para in getData()">{{ para }}</p>
     </div>
