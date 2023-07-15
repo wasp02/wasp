@@ -14,7 +14,7 @@ function getTime() {
 }
 
 function getStill() {
-  return "/" + articles[1][props.id].still;
+  return "/wasp/" + articles[1][props.id].still;
 }
 
 function getLines() {
