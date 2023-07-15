@@ -14,7 +14,7 @@ function getTime() {
 }
 
 function getStill() {
-  return articles[1][props.id].still;
+  return "/" + articles[1][props.id].still;
 }
 
 function getLines() {
@@ -38,7 +38,7 @@ function getLines() {
     </div>
     <div className="still-wrapper">
       <p>Favourite still:</p>
-      <img :src="'src/stills/' + getStill()" />
+      <img :src="getStill()" />
     </div>
   </div>
 </template>
