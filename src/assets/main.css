@@ -1,0 +1,42 @@
+@import "./base.css";
+
+#app {
+  display: grid;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+time {
+  color: grey;
+}
+
+@media (hover: hover) {
+  a:hover:not(nav > a) {
+    background-color: hsla(105, 3%, 29%, 0.1);
+  }
+}
+
+/* Media query to center content
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+} */
