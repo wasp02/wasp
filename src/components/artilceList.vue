@@ -32,10 +32,6 @@ import { RouterLink, RouterView } from "vue-router";
   font-size: 0.7em;
 }
 
-div > a {
-  color: rgb(224, 8, 16);
-}
-
 a:visited {
   color: black;
 }
