@@ -96,6 +96,10 @@ i {
   max-width: inherit;
 }
 
+img {
+  vertical-align: text-top;
+}
+
 .article-wrapper {
   max-width: 90vh;
   margin: auto;

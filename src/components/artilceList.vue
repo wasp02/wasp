@@ -11,25 +11,38 @@ import { RouterLink, RouterView } from "vue-router";
           name: 'article',
           params: { id: article },
         }"
-        >{{ articles[1][article].name
-        }}<span id="article-list-span">
-          - {{ articles[1][article].time }}</span
-        ></router-link
+        ><p>{{ articles[1][article].name }}</p>
+        <p id="article-list-paragraph">
+          {{ articles[1][article].time }}
+        </p></router-link
       >
     </div>
   </div>
 </template>
 
 <style>
+@media (min-width: 443px) {
+  .article-list-wrapper p {
+    display: inline;
+  }
+}
+
+.article-list-wrapper p:not(:last-child) {
+  margin: 0 1rem 0 0;
+}
+
 .article-list-wrapper {
   max-width: 80vh;
   font-size: 1.5em;
   color: black;
+  padding: 0 1em;
 }
 
-#article-list-span {
+#article-list-paragraph {
   color: grey;
   font-size: 0.7em;
+  vertical-align: text-bottom;
+  margin: 0;
 }
 
 a:visited {
