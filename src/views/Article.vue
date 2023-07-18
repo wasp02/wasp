@@ -20,6 +20,10 @@ function getStill() {
 function getLines() {
   return articles[1][props.id].lines;
 }
+
+function getInterview() {
+  return articles[1][props.id].interview;
+}
 </script>
 
 <template>
@@ -28,7 +32,10 @@ function getLines() {
       <h1>{{ articles[1][props.id].name }}</h1>
       <time>{{ getTime() }}</time>
       <p v-for="para in getData()">{{ para }}</p>
+      <p>{{ getInterview().interviewee }} -</p>
+      <p>{{ getInterview().content }}</p>
     </div>
+    <hr />
     <div className="dialog-wrapper">
       <p>Favourite dialog:</p>
       <div className="dialog-container" v-for="line in getLines()">
@@ -36,6 +43,7 @@ function getLines() {
         <p>{{ line[1] }}</p>
       </div>
     </div>
+    <hr />
     <div className="still-wrapper">
       <p>Favourite still:</p>
       <img :src="getStill()" />
@@ -52,12 +60,24 @@ pre {
   white-space: pre;
 }
 
-i {
+p:not(:nth-last-child(2)) {
+  margin: 2em 0;
+}
+
+.dialog-contianer > i {
   text-transform: uppercase;
 }
 
-.dialog-wrapper {
-  margin-bottom: 4em;
+.paragraph-wrapper > p:last-child {
+  font-style: italic;
+  padding-left: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+hr {
+  opacity: 50%;
+  margin: 3em 0;
 }
 
 .dialog-wrapper > p {
@@ -72,14 +92,6 @@ i {
   margin-bottom: 2em;
 }
 
-.paragraph-wrapper > p:not(:last-child) {
-  margin-bottom: 2em;
-}
-
-.paragraph-wrapper {
-  margin-bottom: 4em;
-}
-
 .dialog-container {
   text-align: center;
 }
@@ -89,11 +101,11 @@ i {
 }
 
 .still-wrapper {
-  max-width: inherit;
+  padding-bottom: 3em;
 }
 
 .still-wrapper img {
-  max-width: inherit;
+  max-width: 100%;
 }
 
 img {
@@ -101,7 +113,19 @@ img {
 }
 
 .article-wrapper {
-  max-width: 90vh;
+  max-width: 50vw;
   margin: auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .article-wrapper {
+    max-width: 70vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .article-wrapper {
+    max-width: 90vw;
+  }
 }
 </style>

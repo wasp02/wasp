@@ -1,6 +1,6 @@
 <script setup>
 import { articles } from "../articles/test.js";
-import { RouterLink, RouterView } from "vue-router";
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
